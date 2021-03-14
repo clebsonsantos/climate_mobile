@@ -28,11 +28,12 @@ const Home = () => {
         setLoading(false)
         return
       }
-      let location = await Location.getCurrentPositionAsync({})
-      console.log(location.coords)
+      let location = await Location.getCurrentPositionAsync()
+     // console.log(location.coords)
 
-     const response = await api.get(`/weather?key=${key}&lat=${location.coords.latitude}&lon=${location.coords.longitude}`)
+    const response = await api.get(`/weather?key=${key}&lat=${location.coords.latitude}&lon=${location.coords.longitude}`)
     // console.log(response.data)
+    
 
      setWeather(response.data)
 
