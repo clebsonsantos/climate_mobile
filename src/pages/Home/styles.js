@@ -7,6 +7,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#e8f0ff',
     paddingTop: '5%'
+  },
+  list:{
+    
   }
 
 })
