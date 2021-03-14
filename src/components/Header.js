@@ -5,21 +5,22 @@ import { Ionicons} from '@expo/vector-icons'
 
 // import { Container } from './styles';
 
-const Header = () => {
+const Header = ({background, weather, icon}) => {
   return (
     <LinearGradient 
     style={styles.header}
-    colors={['#1ed6ff', '#97c1ff']}
+    colors={background}
     >
-    <Text style={styles.date}>14/03/2021</Text>
-    <Text style={styles.city}>Mamanguape</Text>
+     <Text style={styles.date}>{weather.results.date}</Text>
+
+    <Text style={styles.city}>{weather.results.city_name}</Text> 
 
     <Ionicons 
-    name='cloud'
-    color='#fff'
+    name={icon.name}
+    color={icon.color}
     size={150}
     />
-    <Text style={styles.temp}>30°</Text>
+     <Text style={styles.temp}>{weather.results.temp}°</Text> 
     </LinearGradient>
   )
 }
